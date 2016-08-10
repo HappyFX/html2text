@@ -35,6 +35,7 @@ class Html2Text {
 	 */
 	static function convert($html) {
 		// replace &nbsp; with spaces
+		$html = str_replace(' class="MsoNormal"', '', $html);
 		$html = str_replace("&nbsp;", " ", $html);
 		$html = str_replace("\xc2\xa0", " ", $html);
 
